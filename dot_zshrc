@@ -37,11 +37,13 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme romkatv/powerlevel10k
 antigen apply
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-
-
 bindkey -v
+export ZVM_VI_ESCAPE_BINDKEY=kj
+export ZVM_VI_INSERT_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+export ZVM_VI_VISUAL_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+export ZVM_VI_OPPEND_ESCAPE_BINDKEY=$ZVM_VI_ESCAPE_BINDKEY
+
+zvm_after_init_commands+=('source <(fzf --zsh)')
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -49,8 +51,6 @@ bindkey -v
 # zsh-history-substring-search configuration
 bindkey '^[[A' history-substring-search-up # or '\eOA'
 bindkey '^[[B' history-substring-search-down # or '\eOB'
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 # pyenv
@@ -58,15 +58,12 @@ export PYENV_ROOT=$HOME/.pyenv
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export TERMINAL=kitty
-export BROWSER=google-chrome-stable
-export EDITOR=nvim
-export SHELL=/bin/zsh
 
-# aliases
+# commands
 alias sudo="sudo "
 alias ls="eza "
 alias v=nvim
+alias cm="chezmoi cd"
 alias zs="source ~/.zshrc"
 alias ze="nvim ~/.zshrc"
 
@@ -83,5 +80,6 @@ alias glog="git log"
 alias gcl="git clone" 
 alias gft="git fetch"
 
+# misc path
 export PATH=.local/share/gem/ruby/3.3.0/bin:$PATH
 

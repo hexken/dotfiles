@@ -1,3 +1,53 @@
 [user]
 	name = Ken Tjhia
 	email = KenTjhia@gmail.com
+
+[core]
+  editor = nvim
+  pager = delta
+  excludeFiles = "~/.gitignore"
+
+[push]
+  default = current
+  autoSetupRemote = true
+  followtags = true
+
+[pull]
+	ff = only
+
+[diff]
+  algorithm = histogram
+  tool = difftastic
+  context = 10
+
+[rebase]
+  autosquash = true
+
+[init]
+  defaultBranch = main
+
+[commit]
+  verbose = true
+
+[help]
+  autocorrect = prompt
+
+[merge]
+  conflictstyle = zdiff3
+  tool = meld
+
+[alias]
+        lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all -n 15
+
+[transfer]                                                                    
+  fsckobjects = true
+
+[fetch]
+  fsckobjects = true
+
+[receive]
+  fsckobjects = true
+
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
+
