@@ -1,9 +1,0 @@
-[Default Applications]
-x-scheme-handler/http=google-chrome.desktop
-x-scheme-handler/https=google-chrome.desktop
-
-[Added Associations]
-x-scheme-handler/http=firefox.desktop
-x-scheme-handler/https=firefox.desktop
-
-[Removed Associations]
