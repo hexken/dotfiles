@@ -6,6 +6,6 @@ x-scheme-handler/webcal=firefox.desktop
 [Added Associations]
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
-application/pdf=qpdfview.desktop
+application/pdf=sioyek.desktop
 
 [Removed Associations]
