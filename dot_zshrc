@@ -81,6 +81,7 @@ alias gcl="git clone"
 alias gft="git fetch"
 
 alias owui="/sda/Envs/open-webui/start.sh && xdg-open http://localhost:8080"
+alias sopt="source /sda/Envs/opt/bin/activate"
 
 # misc path
 export PATH=.local/share/gem/ruby/3.3.0/bin:$PATH
