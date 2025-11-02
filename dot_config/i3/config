@@ -288,6 +288,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 # bindsym $mod+p exec --no-startup-id /usr/local/bin/switch-audio-port
 
 ## App shortcuts
+bindsym $mod+Shift+b exec xset dpms force off
 bindsym $mod+n exec --no-startup-id /usr/bin/obsidian
 bindsym $mod+p exec --no-startup-id /usr/bin/sioyek
 bindsym $mod+w exec --no-startup-id /usr/bin/firefox
@@ -298,6 +299,11 @@ bindsym Print exec --no-startup-id scrot ~/pictures/screenshots/%Y-%m-%d-%T-scre
 # Power Profiles menu switcher (rofi)
 bindsym $mod+Shift+p exec --no-startup-id ~/.config/i3/scripts/power-profiles
 
+# Turn off screen after 5 minutes of inactivity
+exec --no-startup-id xset dpms 300 300 300
+# Also blank the screen (helps with burn-in on OLED/LCD with static content)
+exec --no-startup-id xset s 300
+exec --no-startup-id xset s blank
 ##########################################
 # configuration for workspace behaviour: #
 ##########################################
