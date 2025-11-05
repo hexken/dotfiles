@@ -27,15 +27,8 @@ compinit
 # End of lines added by compinstall
 
 source /usr/share/zsh/share/antigen.zsh
+antigen init $HOME/.antigen/.antigenrc
 
-antigen bundle "MichaelAquilina/zsh-you-should-use"
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle jeffreytse/zsh-vi-mode
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-antigen theme romkatv/powerlevel10k
-antigen apply
 
 bindkey -v
 export ZVM_VI_ESCAPE_BINDKEY=kj
@@ -63,7 +56,11 @@ eval "$(pyenv init -)"
 alias sudo="sudo "
 alias ls="eza "
 alias v=nvim
+
 alias cm="chezmoi cd"
+alias cs="chezmoi status"
+alias ce="chezmoi edit"
+
 alias zs="source ~/.zshrc"
 alias ze="nvim ~/.zshrc"
 
