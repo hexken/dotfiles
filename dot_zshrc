@@ -59,6 +59,8 @@ alias v=nvim
 
 alias ccd="chezmoi cd"
 alias cm="chezmoi managed"
+alias capp="chezmoi apply"
+alias cra="chezmoi re-add"
 alias cs="chezmoi status"
 alias ce="chezmoi edit"
 
