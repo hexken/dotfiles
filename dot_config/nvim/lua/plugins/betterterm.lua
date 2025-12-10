@@ -7,7 +7,7 @@ return {
       function()
         require('betterTerm').open()
       end,
-      desc = 'Open BetterTerm 0',
+      desc = 'Open BetterTerm 1',
     },
     {
       mode = { 'n', 't' },
